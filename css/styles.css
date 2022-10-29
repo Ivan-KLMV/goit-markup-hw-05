@@ -174,17 +174,24 @@ a,
   margin: 0;
   width: 30px;
   height: 30px;
-  background-image: url(../images/close.svg);
-  border: none;
+  background-color: var(--header-background);
+  /* background-image: url(../images/close.svg); */
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   transform: scale(1);
-  transition: transform 250ms var(--cubic-bezier);
+  transition: transform 250ms var(--cubic-bezier),
+    color 250ms var(--cubic-bezier);
+}
+
+.icon-close {
+  fill: currentColor;
 }
 
 .close-bttn:hover,
 .close-bttn:focus {
   cursor: pointer;
   transform: scale(1.1);
+  color: var(--accent-blue-color);
 }
 
 .benefit {
@@ -333,7 +340,7 @@ a,
   transform: scaleX(1);
   transition: transform 250ms var(--cubic-bezier),
     bacground-color 250ms var(--cubic-bezier),
-    box-shadow 250ms var(--cubic-bezier), color 250ms var(--cubic-bezier);
+    box-shadow 250ms var(--cubic-bezier), color 100ms var(--cubic-bezier);
 }
 
 .filters-bttns {
